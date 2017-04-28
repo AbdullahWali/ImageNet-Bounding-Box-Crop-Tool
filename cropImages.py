@@ -43,7 +43,7 @@ for directory in get_immediate_subdirectories(rootdir):	#loop over all dirs
 					cropped = img.crop((xmin, ymin, xmax, ymax))
 					save_file = open (os.path.join(CroppedFolder, directory, filename), 'w')
 					cropped.save(os.path.join(CroppedFolder, directory, filename), "JPEG")
-					
+					save_file.close()
 
 
 				except Exception, e:
